@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59EF6818211B7D1B00398FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF6817211B7D1B00398FFF /* AppDelegate.swift */; };
+		59EF681A211B7D1B00398FFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF6819211B7D1B00398FFF /* ViewController.swift */; };
+		59EF681C211B7D1C00398FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59EF681B211B7D1C00398FFF /* Assets.xcassets */; };
+		59EF681F211B7D1C00398FFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59EF681D211B7D1C00398FFF /* Main.storyboard */; };
+		59EF682B211B7D1C00398FFF /* WristKeyManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF682A211B7D1C00398FFF /* WristKeyManagerTests.swift */; };
+		59EF6836211B7D1C00398FFF /* WristKeyManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF6835211B7D1C00398FFF /* WristKeyManagerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59EF6827211B7D1C00398FFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59EF680C211B7D1B00398FFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59EF6813211B7D1B00398FFF;
+			remoteInfo = WristKeyManager;
+		};
+		59EF6832211B7D1C00398FFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59EF680C211B7D1B00398FFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59EF6813211B7D1B00398FFF;
+			remoteInfo = WristKeyManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		59EF6814211B7D1B00398FFF /* WristKeyManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WristKeyManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59EF6817211B7D1B00398FFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		59EF6819211B7D1B00398FFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		59EF681B211B7D1C00398FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59EF681E211B7D1C00398FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		59EF6820211B7D1C00398FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59EF6821211B7D1C00398FFF /* WristKeyManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WristKeyManager.entitlements; sourceTree = "<group>"; };
+		59EF6826211B7D1C00398FFF /* WristKeyManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WristKeyManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59EF682A211B7D1C00398FFF /* WristKeyManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WristKeyManagerTests.swift; sourceTree = "<group>"; };
+		59EF682C211B7D1C00398FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59EF6831211B7D1C00398FFF /* WristKeyManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WristKeyManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59EF6835211B7D1C00398FFF /* WristKeyManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WristKeyManagerUITests.swift; sourceTree = "<group>"; };
+		59EF6837211B7D1C00398FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59EF6811211B7D1B00398FFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59EF6823211B7D1C00398FFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59EF682E211B7D1C00398FFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59EF680B211B7D1B00398FFF = {
+			isa = PBXGroup;
+			children = (
+				59EF6816211B7D1B00398FFF /* WristKeyManager */,
+				59EF6829211B7D1C00398FFF /* WristKeyManagerTests */,
+				59EF6834211B7D1C00398FFF /* WristKeyManagerUITests */,
+				59EF6815211B7D1B00398FFF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		59EF6815211B7D1B00398FFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59EF6814211B7D1B00398FFF /* WristKeyManager.app */,
+				59EF6826211B7D1C00398FFF /* WristKeyManagerTests.xctest */,
+				59EF6831211B7D1C00398FFF /* WristKeyManagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59EF6816211B7D1B00398FFF /* WristKeyManager */ = {
+			isa = PBXGroup;
+			children = (
+				59EF6817211B7D1B00398FFF /* AppDelegate.swift */,
+				59EF6819211B7D1B00398FFF /* ViewController.swift */,
+				59EF681B211B7D1C00398FFF /* Assets.xcassets */,
+				59EF681D211B7D1C00398FFF /* Main.storyboard */,
+				59EF6820211B7D1C00398FFF /* Info.plist */,
+				59EF6821211B7D1C00398FFF /* WristKeyManager.entitlements */,
+			);
+			path = WristKeyManager;
+			sourceTree = "<group>";
+		};
+		59EF6829211B7D1C00398FFF /* WristKeyManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				59EF682A211B7D1C00398FFF /* WristKeyManagerTests.swift */,
+				59EF682C211B7D1C00398FFF /* Info.plist */,
+			);
+			path = WristKeyManagerTests;
+			sourceTree = "<group>";
+		};
+		59EF6834211B7D1C00398FFF /* WristKeyManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				59EF6835211B7D1C00398FFF /* WristKeyManagerUITests.swift */,
+				59EF6837211B7D1C00398FFF /* Info.plist */,
+			);
+			path = WristKeyManagerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59EF6813211B7D1B00398FFF /* WristKeyManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59EF683A211B7D1C00398FFF /* Build configuration list for PBXNativeTarget "WristKeyManager" */;
+			buildPhases = (
+				59EF6810211B7D1B00398FFF /* Sources */,
+				59EF6811211B7D1B00398FFF /* Frameworks */,
+				59EF6812211B7D1B00398FFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WristKeyManager;
+			productName = WristKeyManager;
+			productReference = 59EF6814211B7D1B00398FFF /* WristKeyManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		59EF6825211B7D1C00398FFF /* WristKeyManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59EF683D211B7D1C00398FFF /* Build configuration list for PBXNativeTarget "WristKeyManagerTests" */;
+			buildPhases = (
+				59EF6822211B7D1C00398FFF /* Sources */,
+				59EF6823211B7D1C00398FFF /* Frameworks */,
+				59EF6824211B7D1C00398FFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59EF6828211B7D1C00398FFF /* PBXTargetDependency */,
+			);
+			name = WristKeyManagerTests;
+			productName = WristKeyManagerTests;
+			productReference = 59EF6826211B7D1C00398FFF /* WristKeyManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		59EF6830211B7D1C00398FFF /* WristKeyManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59EF6840211B7D1C00398FFF /* Build configuration list for PBXNativeTarget "WristKeyManagerUITests" */;
+			buildPhases = (
+				59EF682D211B7D1C00398FFF /* Sources */,
+				59EF682E211B7D1C00398FFF /* Frameworks */,
+				59EF682F211B7D1C00398FFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59EF6833211B7D1C00398FFF /* PBXTargetDependency */,
+			);
+			name = WristKeyManagerUITests;
+			productName = WristKeyManagerUITests;
+			productReference = 59EF6831211B7D1C00398FFF /* WristKeyManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59EF680C211B7D1B00398FFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Sreeteja Jonnada";
+				TargetAttributes = {
+					59EF6813211B7D1B00398FFF = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					59EF6825211B7D1C00398FFF = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 59EF6813211B7D1B00398FFF;
+					};
+					59EF6830211B7D1C00398FFF = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 59EF6813211B7D1B00398FFF;
+					};
+				};
+			};
+			buildConfigurationList = 59EF680F211B7D1B00398FFF /* Build configuration list for PBXProject "WristKeyManager" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59EF680B211B7D1B00398FFF;
+			productRefGroup = 59EF6815211B7D1B00398FFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59EF6813211B7D1B00398FFF /* WristKeyManager */,
+				59EF6825211B7D1C00398FFF /* WristKeyManagerTests */,
+				59EF6830211B7D1C00398FFF /* WristKeyManagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59EF6812211B7D1B00398FFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59EF681C211B7D1C00398FFF /* Assets.xcassets in Resources */,
+				59EF681F211B7D1C00398FFF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59EF6824211B7D1C00398FFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59EF682F211B7D1C00398FFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59EF6810211B7D1B00398FFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59EF681A211B7D1B00398FFF /* ViewController.swift in Sources */,
+				59EF6818211B7D1B00398FFF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59EF6822211B7D1C00398FFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59EF682B211B7D1C00398FFF /* WristKeyManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59EF682D211B7D1C00398FFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59EF6836211B7D1C00398FFF /* WristKeyManagerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59EF6828211B7D1C00398FFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59EF6813211B7D1B00398FFF /* WristKeyManager */;
+			targetProxy = 59EF6827211B7D1C00398FFF /* PBXContainerItemProxy */;
+		};
+		59EF6833211B7D1C00398FFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59EF6813211B7D1B00398FFF /* WristKeyManager */;
+			targetProxy = 59EF6832211B7D1C00398FFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		59EF681D211B7D1C00398FFF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59EF681E211B7D1C00398FFF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		59EF6838211B7D1C00398FFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		59EF6839211B7D1C00398FFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		59EF683B211B7D1C00398FFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WristKeyManager/WristKeyManager.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7PM4K976Y6;
+				INFOPLIST_FILE = WristKeyManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jonnada.WristKeyManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		59EF683C211B7D1C00398FFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WristKeyManager/WristKeyManager.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7PM4K976Y6;
+				INFOPLIST_FILE = WristKeyManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jonnada.WristKeyManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		59EF683E211B7D1C00398FFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7PM4K976Y6;
+				INFOPLIST_FILE = WristKeyManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jonnada.WristKeyManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WristKeyManager.app/Contents/MacOS/WristKeyManager";
+			};
+			name = Debug;
+		};
+		59EF683F211B7D1C00398FFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7PM4K976Y6;
+				INFOPLIST_FILE = WristKeyManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jonnada.WristKeyManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WristKeyManager.app/Contents/MacOS/WristKeyManager";
+			};
+			name = Release;
+		};
+		59EF6841211B7D1C00398FFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7PM4K976Y6;
+				INFOPLIST_FILE = WristKeyManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jonnada.WristKeyManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = WristKeyManager;
+			};
+			name = Debug;
+		};
+		59EF6842211B7D1C00398FFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7PM4K976Y6;
+				INFOPLIST_FILE = WristKeyManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jonnada.WristKeyManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = WristKeyManager;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59EF680F211B7D1B00398FFF /* Build configuration list for PBXProject "WristKeyManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59EF6838211B7D1C00398FFF /* Debug */,
+				59EF6839211B7D1C00398FFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59EF683A211B7D1C00398FFF /* Build configuration list for PBXNativeTarget "WristKeyManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59EF683B211B7D1C00398FFF /* Debug */,
+				59EF683C211B7D1C00398FFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59EF683D211B7D1C00398FFF /* Build configuration list for PBXNativeTarget "WristKeyManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59EF683E211B7D1C00398FFF /* Debug */,
+				59EF683F211B7D1C00398FFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59EF6840211B7D1C00398FFF /* Build configuration list for PBXNativeTarget "WristKeyManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59EF6841211B7D1C00398FFF /* Debug */,
+				59EF6842211B7D1C00398FFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 59EF680C211B7D1B00398FFF /* Project object */;
+}
