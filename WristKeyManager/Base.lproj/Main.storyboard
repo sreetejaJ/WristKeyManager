@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -854,10 +855,21 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9w0-ph-Zqf">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="9w0-ph-Zqf">
                                 <rect key="frame" x="289" y="180" width="157" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="pEh-tF-Ei8"/>
+                                </constraints>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Multiline Label" id="aIc-7V-I8P">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="feb-Nm-5Em">
+                                <rect key="frame" x="70" y="180" width="37" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="HuP-SW-Oqd">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -878,8 +890,11 @@
                             <constraint firstItem="6ga-Dh-YpW" firstAttribute="centerX" secondItem="76g-IE-FqO" secondAttribute="centerX" id="Kna-Un-gRK"/>
                             <constraint firstItem="C81-Yu-lG9" firstAttribute="top" secondItem="zXC-wa-bMs" secondAttribute="top" id="LJ5-aF-Vcn"/>
                             <constraint firstItem="eEV-p8-9rB" firstAttribute="leading" secondItem="w8V-0W-aNI" secondAttribute="trailing" constant="16" id="MA6-6h-eT6"/>
+                            <constraint firstItem="9w0-ph-Zqf" firstAttribute="leading" secondItem="knv-cB-hID" secondAttribute="trailing" constant="10" id="Mtx-ro-jjp"/>
                             <constraint firstItem="UHf-LC-0YG" firstAttribute="leading" secondItem="Ami-xe-Fu0" secondAttribute="leading" id="NM6-gl-xw5"/>
                             <constraint firstItem="IgF-o2-pfa" firstAttribute="trailing" secondItem="zXC-wa-bMs" secondAttribute="trailing" id="NYR-DU-Vpt"/>
+                            <constraint firstItem="9w0-ph-Zqf" firstAttribute="trailing" secondItem="29t-9v-dBC" secondAttribute="trailing" id="OEz-PK-ayn"/>
+                            <constraint firstItem="9w0-ph-Zqf" firstAttribute="firstBaseline" secondItem="76g-IE-FqO" secondAttribute="baseline" id="P7e-1V-BPk"/>
                             <constraint firstItem="WFR-YO-iCz" firstAttribute="top" secondItem="IgF-o2-pfa" secondAttribute="top" id="Qkm-Sy-dPX"/>
                             <constraint firstItem="WFR-YO-iCz" firstAttribute="leading" secondItem="3tx-dX-5Z1" secondAttribute="trailing" constant="8" symbolic="YES" id="RJf-HC-3Xo"/>
                             <constraint firstItem="knv-cB-hID" firstAttribute="top" secondItem="76g-IE-FqO" secondAttribute="bottom" constant="8" symbolic="YES" id="TSy-fd-1XG"/>

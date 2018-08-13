@@ -67,6 +67,7 @@ class ViewController: NSViewController{
             ErrorLabel.stringValue = msg
             ErrorLabel.textColor = NSColor.red
             ErrorLabel.isHidden = false
+            print("An error occured: ")
             print(msg)
         }
     }
