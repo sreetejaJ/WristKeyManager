@@ -13,6 +13,7 @@
 		59EF681F211B7D1C00398FFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59EF681D211B7D1C00398FFF /* Main.storyboard */; };
 		59EF682B211B7D1C00398FFF /* WristKeyManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF682A211B7D1C00398FFF /* WristKeyManagerTests.swift */; };
 		59EF6836211B7D1C00398FFF /* WristKeyManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF6835211B7D1C00398FFF /* WristKeyManagerUITests.swift */; };
+		59EF6846211CCF8E00398FFF /* bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF6845211CCF8E00398FFF /* bluetooth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		59EF6831211B7D1C00398FFF /* WristKeyManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WristKeyManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59EF6835211B7D1C00398FFF /* WristKeyManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WristKeyManagerUITests.swift; sourceTree = "<group>"; };
 		59EF6837211B7D1C00398FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59EF6845211CCF8E00398FFF /* bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bluetooth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				59EF681D211B7D1C00398FFF /* Main.storyboard */,
 				59EF6820211B7D1C00398FFF /* Info.plist */,
 				59EF6821211B7D1C00398FFF /* WristKeyManager.entitlements */,
+				59EF6845211CCF8E00398FFF /* bluetooth.swift */,
 			);
 			path = WristKeyManager;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			files = (
 				59EF681A211B7D1B00398FFF /* ViewController.swift in Sources */,
 				59EF6818211B7D1B00398FFF /* AppDelegate.swift in Sources */,
+				59EF6846211CCF8E00398FFF /* bluetooth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +423,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = WristKeyManager/WristKeyManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7PM4K976Y6;
@@ -438,7 +441,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = WristKeyManager/WristKeyManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7PM4K976Y6;
