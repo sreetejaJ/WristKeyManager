@@ -20,18 +20,19 @@ class ViewController: NSViewController{
     var writeChar: CBCharacteristic!
     var connected = false
     
-    @IBOutlet weak var ErrorLabel: NSTextField!
-    
     @IBOutlet weak var MemoryIndicator: NSLevelIndicator!
     @IBOutlet weak var StatusIndicator: NSLevelIndicator!
     
     @IBOutlet weak var MasterPwd: NSSecureTextField!
     
     @IBOutlet weak var Secure: NSTextField!
+    @IBOutlet weak var CommKey: NSTextField!
+    @IBOutlet weak var WebsiteKey: NSTextField!
+    @IBOutlet weak var username: NSTextField!
+    @IBOutlet weak var password: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ErrorLabel.isHidden = true
         centralManager = CBCentralManager(delegate: self, queue: nil)
         StatusIndicator.criticalValue = 1
         StatusIndicator.warningValue = 2
@@ -47,33 +48,17 @@ class ViewController: NSViewController{
     
     @IBAction func ConnectButton(_ sender: Any) {
         if(connected){
-            wrstkyPeripheral.writeValue(MasterPwd.stringValue.data(using: .ascii)!, for: writeChar, type: .withoutResponse)
-        }else{
-            var msg = ""
-            switch centralManager.state{
-            case .unknown:
-                msg = "central.state is .unknown"
-            case .resetting:
-                msg = "central.state is .resetting"
-            case .unsupported:
-                msg = "central.state is .unsupported"
-            case .unauthorized:
-                msg = "central.state is .unauthorized"
-            case .poweredOff:
-                msg = "central.state is .poweredOff"
-            case .poweredOn:
-                msg = "central.state is .poweredOn"
-            }
-            ErrorLabel.stringValue = msg
-            ErrorLabel.textColor = NSColor.red
-            ErrorLabel.isHidden = false
-            print("An error occured: ")
-            print(msg)
+            var field = "MPWD:" + MasterPwd.stringValue
+            wrstkyPeripheral.writeValue(field.data(using: .ascii)!, for: writeChar, type: .withoutResponse)
         }
     }
     @IBAction func EncryptButton(_ sender: Any) {
     }
     @IBAction func RetrieveData(_ sender: Any) {
+        if(connected){
+            var field = "RTRV:" + WebsiteKey.stringValue
+            wrstkyPeripheral.writeValue(field.data(using: .ascii)!, for: writeChar, type: .withoutResponse)
+        }
     }
     
     
@@ -115,6 +100,13 @@ extension ViewController: CBCentralManagerDelegate {
         StatusIndicator.criticalValue = 2
         wrstkyPeripheral.discoverServices(nil)
     }
+    func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
+        print("Disconnected!")
+        StatusIndicator.criticalValue = 1
+        StatusIndicator.warningValue = 2
+        connected = false
+        centralManager.scanForPeripherals(withServices: [wristKeyCBUUID])
+    }
     
 }
 
@@ -152,7 +144,31 @@ extension ViewController: CBPeripheralDelegate {
         case rxCBUUID:
             let characteristicData = characteristic.value
             let byteArray = [UInt8](characteristicData!)
-            print(String(bytes: byteArray, encoding: .ascii)!)
+            let val = String(bytes: byteArray, encoding: .ascii)!
+            print(val)
+            let indexStartOfText = val.index(val.startIndex, offsetBy: 5)
+            let substring = val[indexStartOfText...]
+            let string = String(substring)
+            if(val.hasPrefix("ACKN:")){
+                StatusIndicator.criticalValue = 2
+                StatusIndicator.warningValue = 2
+            }
+            if(val.hasPrefix("DATA:")){
+                let dataArr = string.components(separatedBy: "#")
+                print(dataArr[0])
+                print(dataArr[1])
+                username.stringValue = dataArr[0]
+                password.stringValue = dataArr[1]
+                
+            }
+            if(val.hasPrefix("ERRO:")){
+                if(string == "1"){
+                    print("Data Not Found")
+                    username.stringValue = "Data Not Found"
+                    password.stringValue = "Data Not Found"
+                }
+            }
+            
         default:
             print("Unhandled Characteristic UUID: \(characteristic.uuid)")
         }

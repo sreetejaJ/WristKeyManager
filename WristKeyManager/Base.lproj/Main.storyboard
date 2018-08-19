@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -855,17 +854,6 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="9w0-ph-Zqf">
-                                <rect key="frame" x="289" y="180" width="157" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="pEh-tF-Ei8"/>
-                                </constraints>
-                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Multiline Label" id="aIc-7V-I8P">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="UHf-LC-0YG" firstAttribute="leading" secondItem="2j1-mx-dw5" secondAttribute="trailing" constant="10" id="2fm-fC-P6g"/>
@@ -881,11 +869,8 @@
                             <constraint firstItem="6ga-Dh-YpW" firstAttribute="centerX" secondItem="76g-IE-FqO" secondAttribute="centerX" id="Kna-Un-gRK"/>
                             <constraint firstItem="C81-Yu-lG9" firstAttribute="top" secondItem="zXC-wa-bMs" secondAttribute="top" id="LJ5-aF-Vcn"/>
                             <constraint firstItem="eEV-p8-9rB" firstAttribute="leading" secondItem="w8V-0W-aNI" secondAttribute="trailing" constant="16" id="MA6-6h-eT6"/>
-                            <constraint firstItem="9w0-ph-Zqf" firstAttribute="leading" secondItem="knv-cB-hID" secondAttribute="trailing" constant="10" id="Mtx-ro-jjp"/>
                             <constraint firstItem="UHf-LC-0YG" firstAttribute="leading" secondItem="Ami-xe-Fu0" secondAttribute="leading" id="NM6-gl-xw5"/>
                             <constraint firstItem="IgF-o2-pfa" firstAttribute="trailing" secondItem="zXC-wa-bMs" secondAttribute="trailing" id="NYR-DU-Vpt"/>
-                            <constraint firstItem="9w0-ph-Zqf" firstAttribute="trailing" secondItem="29t-9v-dBC" secondAttribute="trailing" id="OEz-PK-ayn"/>
-                            <constraint firstItem="9w0-ph-Zqf" firstAttribute="firstBaseline" secondItem="76g-IE-FqO" secondAttribute="baseline" id="P7e-1V-BPk"/>
                             <constraint firstItem="WFR-YO-iCz" firstAttribute="top" secondItem="IgF-o2-pfa" secondAttribute="top" id="Qkm-Sy-dPX"/>
                             <constraint firstItem="WFR-YO-iCz" firstAttribute="leading" secondItem="3tx-dX-5Z1" secondAttribute="trailing" constant="8" symbolic="YES" id="RJf-HC-3Xo"/>
                             <constraint firstItem="knv-cB-hID" firstAttribute="top" secondItem="76g-IE-FqO" secondAttribute="bottom" constant="8" symbolic="YES" id="TSy-fd-1XG"/>
@@ -920,11 +905,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ErrorLabel" destination="9w0-ph-Zqf" id="xQE-8A-tdp"/>
+                        <outlet property="CommKey" destination="C81-Yu-lG9" id="L7t-hv-osg"/>
                         <outlet property="MasterPwd" destination="WFR-YO-iCz" id="UoF-LU-DBy"/>
                         <outlet property="MemoryIndicator" destination="1yY-XV-Aqa" id="WaZ-ub-qjK"/>
                         <outlet property="Secure" destination="C81-Yu-lG9" id="P4p-Pn-PWu"/>
                         <outlet property="StatusIndicator" destination="knv-cB-hID" id="Un3-vh-Wck"/>
+                        <outlet property="WebsiteKey" destination="eEV-p8-9rB" id="Bzl-dA-eFp"/>
+                        <outlet property="password" destination="Ami-xe-Fu0" id="5EW-A9-GBP"/>
+                        <outlet property="username" destination="UHf-LC-0YG" id="1AP-ei-Cs6"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
