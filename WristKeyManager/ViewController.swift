@@ -25,11 +25,15 @@ class ViewController: NSViewController{
     
     @IBOutlet weak var MasterPwd: NSSecureTextField!
     
-    @IBOutlet weak var Secure: NSTextField!
-    @IBOutlet weak var CommKey: NSTextField!
     @IBOutlet weak var WebsiteKey: NSTextField!
     @IBOutlet weak var username: NSTextField!
     @IBOutlet weak var password: NSTextField!
+    
+    @IBOutlet weak var Retrieve: NSButton!
+    @IBOutlet weak var Encrypt: NSButton!
+    @IBOutlet weak var Connect: NSButton!
+    @IBOutlet weak var Add: NSButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +41,9 @@ class ViewController: NSViewController{
         StatusIndicator.criticalValue = 1
         StatusIndicator.warningValue = 2
         MemoryIndicator.doubleValue = 40
+        Encrypt.isEnabled = false
+        Retrieve.isEnabled = false
+        Add.isEnabled = false
         // Do any additional setup after loading the view.
     }
 
@@ -53,6 +60,10 @@ class ViewController: NSViewController{
         }
     }
     @IBAction func EncryptButton(_ sender: Any) {
+        if(connected){
+            var field = "RTRV:" + "verify"
+            wrstkyPeripheral.writeValue(field.data(using: .ascii)!, for: writeChar, type: .withoutResponse)
+        }
     }
     @IBAction func RetrieveData(_ sender: Any) {
         if(connected){
@@ -61,7 +72,12 @@ class ViewController: NSViewController{
         }
     }
     
-    
+    @IBAction func AddButton(_ sender: Any) {
+        if(connected){
+            var field = "ADDP:" + WebsiteKey.stringValue + "#" + username.stringValue + "#" + password.stringValue
+            wrstkyPeripheral.writeValue(field.data(using: .ascii)!, for: writeChar, type: .withoutResponse)
+        }
+    }
 }
 
 extension ViewController: CBCentralManagerDelegate {
@@ -106,6 +122,9 @@ extension ViewController: CBCentralManagerDelegate {
         StatusIndicator.warningValue = 2
         connected = false
         centralManager.scanForPeripherals(withServices: [wristKeyCBUUID])
+        Connect.isEnabled = true
+        Encrypt.isEnabled = false
+        Retrieve.isEnabled = false
     }
     
 }
@@ -150,6 +169,10 @@ extension ViewController: CBPeripheralDelegate {
             let substring = val[indexStartOfText...]
             let string = String(substring)
             if(val.hasPrefix("ACKN:")){
+                Encrypt.isEnabled = true
+                Retrieve.isEnabled = true
+                Connect.isEnabled = false
+                Add.isEnabled = true
                 StatusIndicator.criticalValue = 2
                 StatusIndicator.warningValue = 2
             }
@@ -161,11 +184,27 @@ extension ViewController: CBPeripheralDelegate {
                 password.stringValue = dataArr[1]
                 
             }
+            if(val.hasPrefix("VRFY:")){
+                Encrypt.isEnabled = false
+                Retrieve.isEnabled = true
+                Connect.isEnabled = false
+                Add.isEnabled = true
+            }
             if(val.hasPrefix("ERRO:")){
                 if(string == "1"){
                     print("Data Not Found")
                     username.stringValue = "Data Not Found"
                     password.stringValue = "Data Not Found"
+                }
+                if(string == "2"){
+                    print("Code was incorrect")
+                    username.stringValue = "Code was incorrect"
+                    password.stringValue = "Code was incorrect"
+                }
+                if(string == "3"){
+                    print("Verification timed out")
+                    username.stringValue = "Verification timed out"
+                    password.stringValue = "Verification timed out"
                 }
             }
             
