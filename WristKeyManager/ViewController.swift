@@ -33,6 +33,8 @@ class ViewController: NSViewController{
     @IBOutlet weak var Encrypt: NSButton!
     @IBOutlet weak var Connect: NSButton!
     @IBOutlet weak var Add: NSButton!
+    @IBOutlet weak var Generate: NSButton!
+    @IBOutlet weak var Delete: NSButton!
     
     
     override func viewDidLoad() {
@@ -40,7 +42,7 @@ class ViewController: NSViewController{
         centralManager = CBCentralManager(delegate: self, queue: nil)
         StatusIndicator.criticalValue = 1
         StatusIndicator.warningValue = 2
-        MemoryIndicator.doubleValue = 40
+        MemoryIndicator.doubleValue = 0
         Encrypt.isEnabled = false
         Retrieve.isEnabled = false
         Add.isEnabled = false
@@ -78,6 +80,21 @@ class ViewController: NSViewController{
             wrstkyPeripheral.writeValue(field.data(using: .ascii)!, for: writeChar, type: .withoutResponse)
         }
     }
+    
+    @IBAction func DeleteButton(_ sender: Any) {
+        if(connected){
+            var field = "DELT:" + WebsiteKey.stringValue
+            wrstkyPeripheral.writeValue(field.data(using: .ascii)!, for: writeChar, type: .withoutResponse)
+        }
+    }
+    
+    @IBAction func GenerateButton(_ sender: Any) {
+        if(connected){
+            var field = "GENP:" + "ASDFASDFASDF"
+            wrstkyPeripheral.writeValue(field.data(using: .ascii)!, for: writeChar, type: .withoutResponse)
+        }
+    }
+    
 }
 
 extension ViewController: CBCentralManagerDelegate {
@@ -175,6 +192,7 @@ extension ViewController: CBPeripheralDelegate {
                 Add.isEnabled = true
                 StatusIndicator.criticalValue = 2
                 StatusIndicator.warningValue = 2
+                MemoryIndicator.doubleValue = Double(string)!
             }
             if(val.hasPrefix("DATA:")){
                 let dataArr = string.components(separatedBy: "#")
@@ -182,13 +200,18 @@ extension ViewController: CBPeripheralDelegate {
                 print(dataArr[1])
                 username.stringValue = dataArr[0]
                 password.stringValue = dataArr[1]
-                
             }
             if(val.hasPrefix("VRFY:")){
                 Encrypt.isEnabled = false
                 Retrieve.isEnabled = true
                 Connect.isEnabled = false
                 Add.isEnabled = true
+            }
+            if(val.hasPrefix("UPMM:")){
+                MemoryIndicator.doubleValue = Double(string)!
+            }
+            if(val.hasPrefix("GENP:")){
+                password.stringValue = string
             }
             if(val.hasPrefix("ERRO:")){
                 if(string == "1"){
@@ -205,6 +228,16 @@ extension ViewController: CBPeripheralDelegate {
                     print("Verification timed out")
                     username.stringValue = "Verification timed out"
                     password.stringValue = "Verification timed out"
+                }
+                if(string == "4"){
+                    print("Could not delete data")
+                    username.stringValue = "Could not delete data"
+                    password.stringValue = "Could not delete data"
+                }
+                if(string == "5"){
+                    print("Password generation error")
+                    username.stringValue = "Password generation error"
+                    password.stringValue = "Password generation error"
                 }
             }
             
